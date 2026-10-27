@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚠️ 罚款通知</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #1a1a2e, #16213e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    padding: 20px;
+  }
+  .card {
+    background: #fff;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    border-top: 8px solid #e63946;
+    animation: stamp .5s cubic-bezier(.68,-0.55,.27,1.55);
+  }
+  @keyframes stamp {
+    0% { transform: scale(.5) rotate(-8deg); opacity: 0; }
+    100% { transform: scale(1) rotate(0); opacity: 1; }
+  }
+  h1 { color: #e63946; font-size: 26px; text-align: center; margin-bottom: 6px; }
+  .sub { text-align: center; color: #999; font-size: 13px; letter-spacing: 4px; margin-bottom: 24px; }
+  .row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #ddd; font-size: 15px; }
+  .row b { color: #333; }
+  .amount { font-size: 22px; color: #e63946; font-weight: bold; }
+  .note { margin-top: 24px; background: #fff3f3; border-left: 4px solid #e63946; padding: 14px; font-size: 14px; color: #555; line-height: 1.7; }
+  .seal {
+    margin: 26px auto 0; width: 110px; height: 110px; border: 3px solid rgba(230,57,70,.7);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    color: rgba(230,57,70,.8); font-weight: bold; font-size: 16px; text-align: center;
+    transform: rotate(-14deg); line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>⚠️ 友谊罚款通知单</h1>
+    <div class="sub">ZM 催收办公室 · 专用章</div>
+    <div class="row"><span>被处罚人</span><b>扫码者本人</b></div>
+    <div class="row"><span>违规事由</span><b>与妖妖的友谊存在欠款</b></div>
+    <div class="row"><span>应缴款项</span><span class="amount">奶茶一杯 🧋</span></div>
+    <div class="row"><span>规格要求</span><b>大杯 · 三分糖 · 加珍珠</b></div>
+    <div class="row"><span>缴款期限</span><b>24 小时内</b></div>
+    <div class="note">根据《友谊法》第 520 条：逾期未缴者，利息按 <b>每天一包辣条</b> 累计计算，滚利无情，概不还价。请携带奶茶前往妖妖处办理销案手续。</div>
+    <div class="seal">ZM 催收<br>✦ 已盖章 ✦</div>
+  </div>
+</body>
+</html>
